@@ -125,16 +125,25 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("檔案分割工具")
 
+    # 創建一個標籤來顯示檔案路徑輸入框旁的紅色星號
+    required_label = tk.Label(root, text='*', fg='red')
+    required_label.grid(row=0, column=0, sticky='w')
+
+
     tk.Label(root, text="選擇檔案：").grid(row=0, column=0, padx=10, pady=10)
     file_path_entry = tk.Entry(root, width=50)
     file_path_entry.grid(row=0, column=1, padx=10, pady=10)
     choose_file_button = tk.Button(root, text="瀏覽", command=choose_file)
     choose_file_button.grid(row=0, column=2, padx=10, pady=10)
 
+    required_label = tk.Label(root, text='*', fg='red')
+    required_label.grid(row=1, column=0, sticky='w')
     tk.Label(root, text="選擇工作表：").grid(row=1, column=0, padx=10, pady=10)
     sheet_combobox = ttk.Combobox(root, width=47)
     sheet_combobox.grid(row=1, column=1, padx=10, pady=10)
 
+    required_label = tk.Label(root, text='*', fg='red')
+    required_label.grid(row=2, column=0, sticky='w')
     tk.Label(root, text="選擇列：").grid(row=2, column=0, padx=10, pady=10)
     column_combobox = ttk.Combobox(root, width=47)
     column_combobox.grid(row=2, column=1, padx=10, pady=10)
@@ -148,6 +157,8 @@ if __name__ == "__main__":
     filter_value_combobox = ttk.Combobox(root, width=47)
     filter_value_combobox.grid(row=4, column=1, padx=10, pady=10)
 
+    required_label = tk.Label(root, text='*', fg='red')
+    required_label.grid(row=5, column=0, sticky='w')
     tk.Label(root, text="選擇輸出欄位：").grid(row=5, column=0, padx=10, pady=10)
     select_all_var = tk.BooleanVar()
     select_all_checkbutton = tk.Checkbutton(root, text="全選", variable=select_all_var, command=select_all_columns)
