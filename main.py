@@ -1,7 +1,7 @@
 import tkinter as tk
 import os
 from tkinter import ttk
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 import pandas as pd
 import openpyxl
 from openpyxl.styles import PatternFill, Font
@@ -112,6 +112,8 @@ def split_file():
 
         wb.save(new_file_name)
         print(f"已創建檔案：{new_file_name}")
+    
+    messagebox.showinfo("完成", "檔案分割已完成！")
 
 
 def select_all_columns():
