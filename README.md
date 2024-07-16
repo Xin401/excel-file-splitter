@@ -3,6 +3,6 @@
 If you want to make an exe file:
 
 ```bash 
-pyinstaller --onefile --windowed 檔案分割工具.py 
+pyinstaller --onefile --windowed main.py 
 ```
 

@@ -146,11 +146,11 @@ if __name__ == "__main__":
 
     required_label = tk.Label(root, text='*', fg='red')
     required_label.grid(row=2, column=0, sticky='w')
-    tk.Label(root, text="選擇列：").grid(row=2, column=0, padx=10, pady=10)
+    tk.Label(root, text="選擇分割欄位：").grid(row=2, column=0, padx=10, pady=10)
     column_combobox = ttk.Combobox(root, width=47)
     column_combobox.grid(row=2, column=1, padx=10, pady=10)
 
-    tk.Label(root, text="選擇過濾列：").grid(row=3, column=0, padx=10, pady=10)
+    tk.Label(root, text="選擇過濾欄位：").grid(row=3, column=0, padx=10, pady=10)
     filter_column_combobox = ttk.Combobox(root, width=47)
     filter_column_combobox.grid(row=3, column=1, padx=10, pady=10)
     filter_column_combobox.bind('<<ComboboxSelected>>', update_filter_values)
